@@ -7,3 +7,13 @@
 
 // const person: string = "Zoda";
 // const count: number = 100;
+
+// Artichectual pattern: MVC, Dependency Injection, MVP, Viper, Three- 
+
+// MVC = MODEL VIEW CONTROLLER
+
+// Design Pattern: Middleware, Decotar
+
+
+
+
