@@ -13,5 +13,5 @@ function getHighestIndex(arr) {
     return arr.indexOf(max);  
 }
 
-console.log(getHighestIndex([88, 91, 12, 111, 78])); 
+console.log(getHighestIndex([5, 21, 12, 21, 8])); 
 console.log(getHighestIndex([1, 2, 4, 66, 14, 15]));
