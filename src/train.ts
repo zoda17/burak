@@ -16,3 +16,22 @@
 // console.log(getHighestIndex([5, 21, 12, 21, 8]));
 
 
+//H-TASK: 
+
+//shunday function tuzing, u integerlardan iborat arrayni argument sifatida qabul qilib, faqat positive qiymatlarni olib string holatda return qilsin
+//MASALAN: getPositive([1, -4, 2]) return qiladi "12"
+
+function getPositive(arr: number[]): string {
+    let positives = arr.filter(num => num > 0);
+    
+    let positiveStrings = positives.map(num => num.toString());
+    
+    let result = positiveStrings.join('');
+    
+    return result;
+  }
+  
+  console.log(getPositive([5, -6, 78, -8, 99])); 
+  console.log(getPositive([1, -4, 2])); 
+  
+  
