@@ -47,13 +47,18 @@
 
 // console.log(getDigits("Zo22d11a")); 
 
+
+
+
+
+
 /* Project Standarts:
 -Logging Standarts
 -Naming Standarts:
 
 function, method, variable => CAMEL  == goHome
 class - PASCAL                       == MemberServive
-folder - Kebab                       == 
+folder , file - Kebab                       == 
 css - Snake                          == button_style
 
 
