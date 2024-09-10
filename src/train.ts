@@ -40,10 +40,23 @@
 //Shunday function tuzing, unga string argument pass bolsin. Function ushbu agrumentdagi digitlarni yangi stringda return qilsin
 //MASALAN: getDigits("m14i1t") return qiladi "141"
 
-function getDigits(input: string): string {
+// function getDigits(input: string): string {
  
-  return input.split('').filter(char => /\d/.test(char)).join('');
-}
+//   return input.split('').filter(char => /\d/.test(char)).join('');
+// }
 
-console.log(getDigits("Zo22d11a")); 
+// console.log(getDigits("Zo22d11a")); 
 
+/* Project Standarts:
+-Logging Standarts
+-Naming Standarts:
+
+function, method, variable => CAMEL  == goHome
+class - PASCAL                       == MemberServive
+folder - Kebab                       == 
+css - Snake                          == button_style
+
+
+-- Error handling
+
+*/
