@@ -73,18 +73,24 @@ css - Snake                          == button_style
 
 //Yuqoridag misolda argument sifatida kiritilayotgan array tarkibida 4 soni ko'p takrorlanganligi uchun 4'ni return qilmoqda.
 
-function majorityElement(arr: number[]): number | null {
-    let maxCount = 0;
-    let majorityElem: number | null = null;
+// function majorityElement(arr: number[]): number | null {
+//     let maxCount = 0;
+//     let majorityElem: number | null = null;
 
-    arr.forEach(num => {
-        const count = arr.filter(x => x === num).length;
-        if (count > maxCount) {
-            maxCount = count;
-            majorityElem = num;
-        }
-    });
+//     arr.forEach(num => {
+//         const count = arr.filter(x => x === num).length;
+//         if (count > maxCount) {
+//             maxCount = count;
+//             majorityElem = num;
+//         }
+//     });
 
-    return majorityElem;
-}
-console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
+//     return majorityElem;
+// }
+// console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
+
+
+/* 
+Traditional FD:  BSSR => EJS
+Modern FD => REACT
+*/
