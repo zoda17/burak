@@ -94,3 +94,25 @@ css - Snake                          == button_style
 Traditional FD:  BSSR => EJS
 Modern FD => REACT
 */
+
+//TASK J:
+
+/* shunday function tuzing, u string qabul qilsin.
+Va string ichidagi eng uzun so'zni qaytarsin.
+
+MASALAN: findLongestWord("I came from Uzbekistan!"); return "Uzbekistan!"
+
+Yuqoridagi text tarkibida 'Uzbekistan'
+eng uzun so'z bo'lganligi uchun 'Uzbekistan'ni qaytarmoqda
+*/
+
+
+function findLongestWord(s: string): string {
+    const words = s.split(/\s+/);
+    const longestWordLength = Math.max(...words.map(word => word.length));
+    return words.find(word => word.length === longestWordLength) || "";
+}
+
+
+const result = findLongestWord("I came from Uzbekistan!");
+console.log(result); 
