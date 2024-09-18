@@ -134,3 +134,11 @@ function countVowels(s: string) {
 const result = 
 
 console.log(countVowels)
+
+
+
+
+/**
+ request join
+ self destroy
+ */
