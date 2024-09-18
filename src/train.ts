@@ -127,14 +127,28 @@ MASALAN: countVowels("string"); return 1
 Yuqoridagi misolda 'string' so'zi tarkibida yagona unli harf 'i'
 bo'lganligi uchun '1'ni qaytarmoqda */
 
-function countVowels(s: string) {
+// function countVowels(str: string) {
+//     const vowels = ['a', 'e', 'i', 'o', 'u'];
+  
+//     let lowerCaseStr = str.toLowerCase();
+//     let vowelCount = 0;
+  
+//     for (let char of lowerCaseStr) {
+//       if (vowels.includes(char)) {
+//         vowelCount++;
+//       }
+//     }
+  
+//     return vowelCount;
+//   }
+  
+//   console.log(countVowels("striiiiing"));
 
-}
- countVowels
-const result = 
-
-console.log(countVowels)
-
+function countVowels(str: string) {
+return str.match(/[aeiou]/ig)?.length
+} 
+  console.log(countVowels('striooong'));
+  
 
 
 
