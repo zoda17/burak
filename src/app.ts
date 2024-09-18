@@ -12,8 +12,7 @@ const MongoDBStore = ConnectMongoDB(session);
 const store = new MongoDBStore({
     uri: String(process.env.MONGO_URL),
     collection: "sessions",
-  });
-
+});
 
 /** 1-ENTRY **/
 const app = express();
@@ -32,7 +31,7 @@ app.use(
   },
   store: store,
   resave: true,
-  saveUninitialized: true
+  saveUninitialized: true,
  })
 );
 
