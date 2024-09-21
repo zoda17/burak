@@ -144,15 +144,46 @@ bo'lganligi uchun '1'ni qaytarmoqda */
   
 //   console.log(countVowels("striiiiing"));
 
-function countVowels(str: string) {
-return str.match(/[aeiou]/ig)?.length
-} 
-  console.log(countVowels('striooong'));
+// function countVowels(str: string) {
+// return str.match(/[aeiou]/ig)?.length
+// } 
+//   console.log(countVowels('striooong'));
   
 
 
 
-/**
+
+/**  Cookies
  request join
  self destroy
  */
+
+ /**
+  Validation:
+
+  FrontEnd V
+  Pipe V
+  Backend V
+  Database V
+  */
+
+
+ /**  L-TASK So'zlarni ketma - ketligini buzmasdan har bir so'zni
+alohida teskarisiga o'girib beradigan fucntion tuzing.
+Funtion yagona string qabul qilsin
+
+MASALAN: reverseSentence("we like coding!") return "ew ekil !gnidoc";
+Qaytayotgan natijaga e'tibor bersangiz, so'zlar joyi o'zgarmasdan turgan o'rnida teskarisiga o'girilmoqda */
+
+function reverseSentence(str: string) {
+  const splittedStr = str.split(' ')
+  let reversedStr = []
+
+  for(const word of splittedStr){
+    reversedStr.push(word.split('').reverse().join(""))
+  }
+
+  return reversedStr.join(' ')
+} 
+
+console.log(reverseSentence('we like Coding!'));
