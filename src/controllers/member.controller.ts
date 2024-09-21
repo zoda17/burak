@@ -6,8 +6,8 @@ import { LoginInput, Member, MemberInput } from "../libs/types/member";
 import Errors from "../libs/Errors";
 
 const memberService = new MemberService();
-const memberController: T = {};
 
+const memberController: T = {};
 memberController.signup = async (req: Request, res: Response) => {
   try {
     console.log("signup");
@@ -24,6 +24,7 @@ memberController.signup = async (req: Request, res: Response) => {
     // res.json({});
   }
 };
+
 memberController.login = async (req: Request, res: Response) => {
   try {
     console.log("login");
