@@ -71,11 +71,12 @@ class MemberService {
     const member = await this.memberModel
       .findOne(
         { memberNick: input.memberNick },
-        { memberNick: 1, memberPassword: 1 }
+        { memberNick: 1, memberPassword: 1 } //must be taken
       )
       .exec();
-    if (!member) throw new Errors(HttpCode.NOT_FOUND, Message.NO_MEMBER_NICK);
-
+    if (!member) {
+      throw new Errors(HttpCode.NOT_FOUND, Message.NO_MEMBER_NICK);
+    }
     const isMatch = await bcrypt.compare(
       input.memberPassword,
       member.memberPassword
