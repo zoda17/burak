@@ -23,7 +23,8 @@ routerAdmin.get("/check-me", restaurantController.checkAuthSession);
 routerAdmin.get(
     "/product/all", 
 restaurantController.verifyReastaurant,
-productController.getAllProducts);
+productController.getAllProducts
+);
 routerAdmin.post(
     "/product/create", 
     restaurantController.verifyReastaurant,
