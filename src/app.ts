@@ -36,7 +36,7 @@ app.use(
  })
 );
 
-app.use(function(req, res, next) {
+app.use(function(req, res, next) { // browser variables uchun yordamchi
   const sessionInstance = req.session as T;
   res.locals.member = sessionInstance.member;
   next();
