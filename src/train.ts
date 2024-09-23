@@ -175,15 +175,30 @@ Funtion yagona string qabul qilsin
 MASALAN: reverseSentence("we like coding!") return "ew ekil !gnidoc";
 Qaytayotgan natijaga e'tibor bersangiz, so'zlar joyi o'zgarmasdan turgan o'rnida teskarisiga o'girilmoqda */
 
-function reverseSentence(str: string) {
-  const splittedStr = str.split(' ')
-  let reversedStr = []
+// function reverseSentence(str: string) {
+//   const splittedStr = str.split(' ')
+//   let reversedStr = []
 
-  for(const word of splittedStr){
-    reversedStr.push(word.split('').reverse().join(""))
+//   for(const word of splittedStr){
+//     reversedStr.push(word.split('').reverse().join(""))
+//   }
+
+//   return reversedStr.join(' ')
+// } 
+
+// console.log(reverseSentence('we like Coding!'));
+
+
+// TASK M
+
+function getSquareNumber(arr: number[]){
+  let newArr = [];
+
+  for(let i = 0; i < arr.length; i++) {
+   newArr.push({number: arr[i], square: arr[i]*arr[i]})
   }
 
-  return reversedStr.join(' ')
-} 
+  return newArr
+}
 
-console.log(reverseSentence('we like Coding!'));
+console.log(getSquareNumber([15,27,39]));
