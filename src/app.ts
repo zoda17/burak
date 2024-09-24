@@ -24,6 +24,7 @@ app.use(express.json());
 app.use(morgan(MORGAN_FORMAT));
 
 /** 2-SESSIONS **/
+// AUTH & SID REQ.
 app.use(
  session({
     secret: String(process.env.SESSION_SECRET),
@@ -47,7 +48,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 /** 4-ROUTERS  **/
-app.use("/admin", routerAdmin); // BSSR: EJS
+app.use("/admin", routerAdmin); // BSSR: EJS orqali
 app.use("/", router); // Middlewere Design Pattern / SPA: REACT
 
 export default app;

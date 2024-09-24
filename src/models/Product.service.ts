@@ -37,9 +37,9 @@ class ProductService {
     ): Promise<Product> {
      // string => objectId
      id = shapeIntoMongooseObjectId(id);
-     const result = await this.productModel.findOneAndUpdate({ _id: id}, input, { new: true})
+     const result = await this.productModel.findOneAndUpdate({ _id: id }, input, { new: true }) //ozgargan malumotni top
      .exec();
-     if(!result) throw new Errors(HttpCode.NOT_FOUND, Message.UPDATE_FAILED);
+     if(!result) throw new Errors(HttpCode.NOT_MODIFIED, Message.UPDATE_FAILED);
 
      return result;
  }
