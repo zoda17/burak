@@ -227,4 +227,5 @@ function palindromCheck(word: string) {
   
     return backward === forward
    }
+   console.log(palindromCheck('RACECAR'));
   
