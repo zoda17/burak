@@ -191,14 +191,40 @@ Qaytayotgan natijaga e'tibor bersangiz, so'zlar joyi o'zgarmasdan turgan o'rnida
 
 // TASK M
 
-function getSquareNumber(arr: number[]){
-  let newArr = [];
+// function getSquareNumber(arr: number[]){
+//   let newArr = [];
 
-  for(let i = 0; i < arr.length; i++) {
-   newArr.push({number: arr[i], square: arr[i]*arr[i]})
-  }
+//   for(let i = 0; i < arr.length; i++) {
+//    newArr.push({number: arr[i], square: arr[i]*arr[i]})
+//   }
 
-  return newArr
-}
+//   return newArr
+// }
 
-console.log(getSquareNumber([15,27,39]));
+// console.log(getSquareNumber([15,27,39]));
+
+/**
+ TASK N:
+
+Parametr sifatida yagona string qabul qiladigan function tuzing.
+Va bu function string'ni palindrom so'z yoki palindrom so'z emasligini aniqlab (boolean)
+'true' yokida 'false' qaytarsin.
+
+MASALAN: palindromCheck("dad") return true; palindromCheck("son") return false;
+Birinchi misolda 'dad' so'zini ikkala tarafdan o'qilganda ham bir xil ma'noni beradi (true)
+Ikkinchi misolda 'son' so'zini ikkala tarafdan o'qilganda bir xil ma'noni bermaydi (false)
+
+*Palindrom so'z deb o'ngdan chapga ham ~ chapdan o'ngga ham o'qilganda
+bir xil ma'noni beradigan so'zga aytiladi
+ */
+
+function palindromCheck(word: string) {
+    let backward = ''
+     let forward = word.toLowerCase()
+     for(let i = forward.length-1; i >= 0; i--){
+       backward += forward[i]
+     }
+  
+    return backward === forward
+   }
+  
