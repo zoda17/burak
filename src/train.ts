@@ -218,14 +218,38 @@ Ikkinchi misolda 'son' so'zini ikkala tarafdan o'qilganda bir xil ma'noni bermay
 bir xil ma'noni beradigan so'zga aytiladi
  */
 
-function palindromCheck(word: string) {
-    let backward = ''
-     let forward = word.toLowerCase()
-     for(let i = forward.length-1; i >= 0; i--){
-       backward += forward[i]
-     }
+// function palindromCheck(word: string) {
+//     let backward = ''
+//      let forward = word.toLowerCase()
+//      for(let i = forward.length-1; i >= 0; i--){
+//        backward += forward[i]
+//      }
   
-    return backward === forward
-   }
-   console.log(palindromCheck('RACECAR'));
+//     return backward === forward
+//    }
+//    console.log(palindromCheck('RACECAR'));
+
+
+/**
+ TASK O:
+
+Shunday function yozing va u har xil qiymatlardan iborat array qabul qilsin.
+Va array ichidagi sonlar yig'indisini hisoblab chiqgan javobni qaytarsin
+
+MASALAN: calculateSumOfNumbers([10, "10", {son: 10}, true, 35]); return 45
+
+Yuqoridagi misolda array tarkibida faqatgina ikkita yagona son mavjud bular 10 hamda 35
+Qolganlari nested bo'lib yoki type'lari number emas.
+ */
   
+function calculateSumOfNumbers(arr: any[]) {
+  let sum = 0;
+  for (let i = 0; i <= arr.length; i++){
+   if(typeof arr[i] === 'number') sum += arr[i]
+  }
+
+  return sum;
+}
+
+console.log(calculateSumOfNumbers([456, "456", {number: 456}, true, 378]));
+
