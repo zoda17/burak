@@ -242,14 +242,29 @@ Yuqoridagi misolda array tarkibida faqatgina ikkita yagona son mavjud bular 10 h
 Qolganlari nested bo'lib yoki type'lari number emas.
  */
   
-function calculateSumOfNumbers(arr: any[]) {
-  let sum = 0;
-  for (let i = 0; i <= arr.length; i++){
-   if(typeof arr[i] === 'number') sum += arr[i]
-  }
+// function calculateSumOfNumbers(arr: any[]) {
+//   let sum = 0;
+//   for (let i = 0; i <= arr.length; i++){
+//    if(typeof arr[i] === 'number') sum += arr[i]
+//   }
 
-  return sum;
-}
+//   return sum;
+// }
 
-console.log(calculateSumOfNumbers([456, "456", {number: 456}, true, 378]));
+// console.log(calculateSumOfNumbers([456, "456", {number: 456}, true, 378]));
 
+/**
+ TASK P:
+
+Parametr sifatida yagona object qabul qiladigan function yozing.
+Qabul qilingan objectni nested array sifatida convert qilib qaytarsin
+
+MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]
+ */
+
+ function objectToArray (obj:Object) {
+
+    return Object.entries(obj);
+ }
+
+ console.log(objectToArray( {a: 97, b: 98}));
