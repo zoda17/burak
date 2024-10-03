@@ -262,9 +262,34 @@ Qabul qilingan objectni nested array sifatida convert qilib qaytarsin
 MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]
  */
 
- function objectToArray (obj:Object) {
+ /**function objectToArray (obj:Object) {
 
     return Object.entries(obj);
  }
 
- console.log(objectToArray( {a: 97, b: 98}));
+ console.log(objectToArray( {a: 97, b: 98}));*/
+
+//TASK Q:
+
+/**Shunday function yozing, u 2 ta parametrga ega bo'lib
+birinchisi object, ikkinchisi string bo'lsin.
+Agar qabul qilinayotgan ikkinchi string, objectning
+biror bir propertysiga mos kelsa, 'true', aks holda mos kelmasa 'false' qaytarsin.
+
+MASALAN: hasProperty({ name: "BMW", model: "M3" }, "model"); return true;
+Ushbu misolda, 'model' string, objectning propertysiga mos kelganligi uchun 'true' natijani qaytarmoqda
+
+MASALAN: hasProperty({ name: "BMW", model: "M3" }, "year"); return false;
+Ushbu misolda, ikkinchi argument sifatida berilayotgan 'year' objectning
+propertysida mavjud bo'lmaganligi uchun 'false' natijani qaytarmoqda.*/
+
+  function hasProperty(obj:any, str:string) {
+    let has = false
+    for (let key in obj) {
+        if(key === str) has = true
+        else has = false
+    }
+    return has
+}
+console.log('MIT TASK Q-TASK:');
+console.log(hasProperty({name: "BMW", model: "M3"}, "moddel"));
