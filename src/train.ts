@@ -283,13 +283,27 @@ MASALAN: hasProperty({ name: "BMW", model: "M3" }, "year"); return false;
 Ushbu misolda, ikkinchi argument sifatida berilayotgan 'year' objectning
 propertysida mavjud bo'lmaganligi uchun 'false' natijani qaytarmoqda.*/
 
-  function hasProperty(obj:any, str:string) {
-    let has = false
-    for (let key in obj) {
-        if(key === str) has = true
-        else has = false
+//   function hasProperty(obj:any, str:string) {
+//     let has = false
+//     for (let key in obj) {
+//         if(key === str) has = true
+//         else has = false
+//     }
+//     return has
+// }
+// console.log('MIT TASK Q-TASK:');
+// console.log(hasProperty({name: "BMW", model: "M3"}, "moddel"));
+
+// R-TASK
+
+function calculate(str:string) {
+    let plus = str.split('+');
+    
+    let sum = 0;
+    for (let i of plus) {
+        sum += parseInt(i);
     }
-    return has
+    
+    return sum;
 }
-console.log('MIT TASK Q-TASK:');
-console.log(hasProperty({name: "BMW", model: "M3"}, "moddel"));
+console.log(calculate("1+3"));
