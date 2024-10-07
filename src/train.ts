@@ -296,14 +296,48 @@ propertysida mavjud bo'lmaganligi uchun 'false' natijani qaytarmoqda.*/
 
 // R-TASK
 
-function calculate(str:string) {
-    let plus = str.split('+');
+// function calculate(str:string) {
+//     let plus = str.split('+');
     
-    let sum = 0;
-    for (let i of plus) {
-        sum += parseInt(i);
-    }
+//     let sum = 0;
+//     for (let i of plus) {
+//         sum += parseInt(i);
+//     }
     
-    return sum;
+//     return sum;
+// }
+// console.log(calculate("1+3"));
+
+// TASK S
+
+function missingNumber(arr: number[]) {
+  
+  let missedNumbers = []
+  let sortedArr = arr.sort((a, b)=> a - b)
+
+   for(let i = 0; i <= sortedArr.length-2; i++) {
+     
+    if(sortedArr[i] - sortedArr[i+1] !== -1) {
+      missedNumbers.push(sortedArr[i]+1)
+    } 
+
+   }
+
+   return missedNumbers.slice().join(',')
 }
-console.log(calculate("1+3"));
+
+console.log('************', missingNumber([3,0,1,4,6,9]));
+
+function missingNumbers(arr: number[]) {
+  const max = Math.max(...arr);
+  const min = Math.min(...arr);
+  const missing = [];
+
+  for (let i = min; i <= max; i++) {
+    if (!arr.includes(i)) {
+      missing.push(i);
+    }
+  }
+  return missing.slice().join(',');
+}
+console.log('************', missingNumbers([3,0,1,4,6,9]));
