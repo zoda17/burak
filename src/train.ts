@@ -343,13 +343,32 @@ propertysida mavjud bo'lmaganligi uchun 'false' natijani qaytarmoqda.*/
 // console.log('************', missingNumbers([3,0,1,4,6,9]));
 
 // T-TASK
-function mergeSortedArrays(arr1: number[], arr2: number[]) {
-  let newArr = arr1
-  for( let i = 0; i < arr2.length; i++) {
-    newArr.push(arr2[i])
-  }
+// function mergeSortedArrays(arr1: number[], arr2: number[]) {
+//   let newArr = arr1
+//   for( let i = 0; i < arr2.length; i++) {
+//     newArr.push(arr2[i])
+//   }
 
-    return newArr
+//     return newArr
+// }
+
+// console.log(mergeSortedArrays([1,2,3],[4,5,6,7,8,9]));
+
+/** U-TASK:
+
+Shunday function yozing, uni number parametri bolsin
+va 0 dan berilgan parametrgacha bolgan oraliqdagi
+faqat toq sonlar nechtaligini return qilsin
+MASALAN: sumOdds(9) return 4; sumOdds(11) return 5;
+ */
+
+function countOddNumbers(n: number): number {
+   let count = 0;
+   for (let i = 1; i <= n; i += 2) {
+      count++;
+   }
+   return count;
 }
 
-console.log(mergeSortedArrays([1,2,3],[4,5,6,7,8,9]));
+console.log(countOddNumbers(3)); 
+console.log(countOddNumbers(11)); 
