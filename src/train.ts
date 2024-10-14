@@ -362,13 +362,32 @@ faqat toq sonlar nechtaligini return qilsin
 MASALAN: sumOdds(9) return 4; sumOdds(11) return 5;
  */
 
-function countOddNumbers(n: number): number {
-   let count = 0;
-   for (let i = 1; i <= n; i += 2) {
-      count++;
-   }
-   return count;
-}
+// function countOddNumbers(n: number): number {
+//    let count = 0;
+//    for (let i = 1; i <= n; i += 2) {
+//       count++;
+//    }
+//    return count;
+// }
 
-console.log(countOddNumbers(3)); 
-console.log(countOddNumbers(11)); 
+// console.log(countOddNumbers(3)); 
+// console.log(countOddNumbers(11)); 
+
+/** V-TASK:
+Shunday function yozing, uni string parametri bolsin 
+va stringdagi harf va u harf necha marta takrorlangani sonidan
+tashkil topgan object qaytarsin.
+MASALAN: countChars("hello") return {h: 1, e: 1, l: 2, o: 1}
+ **/
+
+function countChars(s: string): { [key: string]: number } {
+  const charCount: { [key: string]: number } = {};
+  for (const char of s) {
+    if (char in charCount) {
+      charCount[char]++;
+    } else {
+      charCount[char] = 1;
+    }
+  }
+  return charCount;
+}
