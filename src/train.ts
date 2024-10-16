@@ -380,14 +380,29 @@ tashkil topgan object qaytarsin.
 MASALAN: countChars("hello") return {h: 1, e: 1, l: 2, o: 1}
  **/
 
-function countChars(s: string): { [key: string]: number } {
-  const charCount: { [key: string]: number } = {};
-  for (const char of s) {
-    if (char in charCount) {
-      charCount[char]++;
-    } else {
-      charCount[char] = 1;
-    }
+// function countChars(s: string): { [key: string]: number } {
+//   const charCount: { [key: string]: number } = {};
+//   for (const char of s) {
+//     if (char in charCount) {
+//       charCount[char]++;
+//     } else {
+//       charCount[char] = 1;
+//     }
+//   }
+//   return charCount;
+// }
+
+// Task - W
+
+function chunkArray(arr: number[], chunkSize: number): number[][] {
+  const chunkedArray: number[][] = [];
+
+  for(let i = 0; i < arr.length; i += chunkSize) {
+     const chunk = arr.slice(i, i + chunkSize);
+     chunkedArray.push(chunk);
   }
-  return charCount;
+
+  return chunkedArray
 }
+
+console.log("test:", chunkArray([1,2,3,4,5,6,7,8,9,10,11,12], 4));
